@@ -1,0 +1,73 @@
+backend:
+  name: github
+  repo: tsheden11/Eleventy-Netlify  # Replace with your actual repo
+  branch: main
+
+media_folder: "src/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - file: "src/_data/site.json"
+        label: "Site Information"
+        name: "site"
+        fields:
+          - {label: "Site Name", name: "name", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "URL", name: "url", widget: "string"}
+          - {label: "Author", name: "author", widget: "string"}
+          - {label: "Year", name: "year", widget: "string"}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/index.md"
+        label: "Homepage"
+        name: "home"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "base.html"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      
+      - file: "src/about.md"
+        label: "About Page"
+        name: "about"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "base.html"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+      
+      - file: "src/contact.md"
+        label: "Contact Page"
+        name: "contact"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "base.html"}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "additional_pages"
+    label: "Additional Pages"
+    folder: "src/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "base.html"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "base.html"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text", required: false}
+      - {label: "Featured Image", name: "featured_image", widget: "image", required: false}
+      - {label: "Tags", name: "tags", widget: "list", default: ["blog"]}
+      - {label: "Body", name: "body", widget: "markdown"}

@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  publish = "_site"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Enable large media for image uploads
+[build.processing]
+  skip_processing = false
+
+# Redirect /admin to /admin/
+[[redirects]]
+  from = "/admin"
+  to = "/admin/"
+  status = 200
