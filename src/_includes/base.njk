@@ -8,17 +8,7 @@
   </head>
   <body class="min-h-screen flex flex-col bg-gray-50 text-gray-900">
 
-    <!-- Header -->
-    <header class="bg-white shadow">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <a href="/" class="text-xl font-bold text-blue-600">MySite</a>
-        <nav class="space-x-6">
-          <a href="/" class="text-gray-600 hover:text-blue-600">Home</a>
-          <a href="/about/" class="text-gray-600 hover:text-blue-600">About</a>
-          <a href="/contact/" class="text-gray-600 hover:text-blue-600">Contact</a>
-        </nav>
-      </div>
-    </header>
+    {% include "partials/header.njk" %}
 
     <!-- Main Content Wrapper -->
     <main class="flex-1">
@@ -27,12 +17,7 @@
       </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-100 mt-8">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-sm text-gray-500">
-        © {{ "now" | date("yyyy") }} MySite. All rights reserved.
-      </div>
-    </footer>
+    {% include "partials/footer.njk" %}
 
   </body>
 </html>
