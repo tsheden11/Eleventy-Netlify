@@ -2,6 +2,8 @@ const { DateTime } = require("luxon");
 
 module.exports = function(eleventyConfig) {
   // Pass through static files
+  eleventyConfig.addPassthroughCopy("src/_includes/components");
+  eleventyConfig.addPassthroughCopy("src/_includes/partials");
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
   eleventyConfig.addPassthroughCopy("src/images");

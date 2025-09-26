@@ -7,6 +7,17 @@ media_folder: "src/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
+  - name: "packages"
+    label: "Packages"
+    files:
+      - file: "src/data/packages.json"
+        label: "Packages Data"
+        name: "packages_json"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Price", name: "price", widget: "string" }
+          
   - name: "settings"
     label: "Site Settings"
     files:
