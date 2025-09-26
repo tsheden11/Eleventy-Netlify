@@ -1,5 +1,5 @@
 ---
-layout: base.html
+layout: base
 title: Home
 ---
 # ✨ *Travel Bhutan with Kota Travels – Authentic Journeys, Family Values*

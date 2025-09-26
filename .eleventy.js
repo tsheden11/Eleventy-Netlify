@@ -1,18 +1,16 @@
-module.exports = function(eleventyConfig) {
-  // Pass through static files
-  eleventyConfig.addPassthroughCopy("src/css");
-  eleventyConfig.addPassthroughCopy("src/js");
-  eleventyConfig.addPassthroughCopy("src/images");
-  eleventyConfig.addPassthroughCopy("admin");
+const { DateTime } = require("luxon");
 
-  // Set input/output directories
+module.exports = function(eleventyConfig) {
+  // Reusable date filter
+  eleventyConfig.addFilter("date", (dateObj, format = "yyyy") => {
+    return DateTime.fromJSDate(dateObj).toFormat(format);
+  });
+
   return {
     dir: {
       input: "src",
+      includes: "_includes",
       output: "_site"
-    },
-    // Use Nunjucks for HTML files
-    markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk"
+    }
   };
 };
