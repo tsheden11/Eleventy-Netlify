@@ -1,6 +1,7 @@
-<div class="card">
-  <img src="{{ package.image }}" alt="{{ package.title }}">
-  <h2>{{ package.title }}</h2>
-  <p>{{ package.description }}</p>
-  <a href="{{ package.link }}">Learn More</a>
+<div class="package-card">
+  <a href="{{ package.link }}">
+    <img src="{{ package.image }}" alt="{{ package.title }}">
+    <h3>{{ package.title }}</h3>
+    <p>{{ package.description }}</p>
+  </a>
 </div>

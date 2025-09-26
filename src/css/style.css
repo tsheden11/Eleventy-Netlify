@@ -1,2 +1,50 @@
-/* This file will be empty - Tailwind comes from CDN */
-/* You can add any custom styles here if needed */
+.packages-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #fff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+}
+
+.card-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}

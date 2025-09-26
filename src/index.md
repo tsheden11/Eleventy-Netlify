@@ -18,5 +18,3 @@ Founded in 2023 in memory of our late father, Kota Travels is a Bhutanese family
 Explore our packages or contact us today. - An adventure of a lifetime awaits.
 
 - - -
-
-*This content is managed through the CMS and can be updated by anyone with access to the admin panel.*
