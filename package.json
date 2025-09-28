@@ -4,15 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy",
-    "dev": "eleventy --serve --watch",
+    "start": "npm-run-all --parallel start:*",
+    "start:eleventy": "eleventy --serve",
+    "start:tailwind": "tailwindcss -i src/css/input.css -o _site/css/style.css --watch",
+    "build": "npm-run-all build:*",
+    "build:tailwind": "tailwindcss -i src/css/input.css -o _site/css/style.css --minify",
+    "build:eleventy": "eleventy",
+    "dev": "npm run start",
     "debug": "DEBUG=Eleventy* eleventy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^3.4.0"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.19"
   }
 }

@@ -1,7 +1,31 @@
-<div class="package-card">
-  <a href="{{ package.link }}">
-    <img src="{{ package.image }}" alt="{{ package.title }}">
-    <h3>{{ package.title }}</h3>
-    <p>{{ package.description }}</p>
+<div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+  <a href="{{ package.link }}" class="block">
+    <div class="relative">
+      <img src="{{ package.image }}" alt="{{ package.title }}" class="w-full h-48 object-cover">
+      <div class="absolute top-4 left-4 bg-yellow-500 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">
+        Featured
+      </div>
+    </div>
+    
+    <div class="p-6">
+      <h3 class="text-xl font-bold text-gray-900 mb-3 hover:text-yellow-600 transition-colors">
+        {{ package.title }}
+      </h3>
+      <p class="text-gray-600 mb-4 line-clamp-3">
+        {{ package.description }}
+      </p>
+      
+      <div class="flex items-center justify-between">
+        <span class="text-yellow-600 font-semibold hover:text-yellow-700 transition-colors">
+          Learn More →
+        </span>
+        <div class="flex items-center text-sm text-gray-500">
+          <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          Multi-day
+        </div>
+      </div>
+    </div>
   </a>
 </div>

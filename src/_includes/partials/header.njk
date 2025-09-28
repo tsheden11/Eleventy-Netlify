@@ -1,14 +1,21 @@
-<header class="site-header">
-  <div class="container">
-    <a href="/" class="logo">Kota Travels</a>
-
-    <nav class="main-nav">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/packages/">Packages</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/contact/">Contact</a></li>
+<header class="bg-white shadow-lg sticky top-0 z-50">
+  <div class="container mx-auto px-6">
+    <nav class="flex justify-between items-center py-4">
+      <div class="flex items-center">
+        <h1 class="text-2xl font-bold text-yellow-600">Kota Travels</h1>
+        <span class="ml-3 text-sm text-gray-600 hidden md:inline">Authentic Bhutanese Journeys</span>
+      </div>
+      
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="/" class="text-gray-700 hover:text-yellow-600 transition-colors duration-200 font-medium">Home</a></li>
+        <li><a href="/packages/" class="text-gray-700 hover:text-yellow-600 transition-colors duration-200 font-medium">Packages</a></li>
+        <li><a href="/about/" class="text-gray-700 hover:text-yellow-600 transition-colors duration-200 font-medium">About</a></li>
+        <li><a href="/contact/" class="text-gray-700 hover:text-yellow-600 transition-colors duration-200 font-medium">Contact</a></li>
       </ul>
+      
+      <button class="bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-2 rounded-full transition-colors duration-200">
+        Plan Your Journey
+      </button>
     </nav>
   </div>
 </header>

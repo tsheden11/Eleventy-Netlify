@@ -1,3 +1,52 @@
-<footer>
-  © {{ "" | date("yyyy") }} MySite. All rights reserved.
+<footer class="bg-gray-800 text-white py-12">
+  <div class="container mx-auto px-6">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Company Info -->
+      <div class="space-y-4">
+        <h3 class="text-xl font-bold text-yellow-400">Kota Travels</h3>
+        <p class="text-gray-300">
+          A family-run Bhutanese travel agency sharing authentic journeys rooted in culture, sustainability, and adventure.
+        </p>
+        <div class="text-sm text-gray-400">
+          Founded 2023 • In loving memory of our father
+        </div>
+      </div>
+      
+      <!-- Quick Links -->
+      <div class="space-y-4">
+        <h4 class="text-lg font-semibold text-white">Quick Links</h4>
+        <ul class="space-y-2 text-gray-300">
+          <li><a href="/" class="hover:text-yellow-400 transition-colors">Home</a></li>
+          <li><a href="/about/" class="hover:text-yellow-400 transition-colors">About Us</a></li>
+          <li><a href="/packages/" class="hover:text-yellow-400 transition-colors">Tour Packages</a></li>
+          <li><a href="/contact/" class="hover:text-yellow-400 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      
+      <!-- Contact Info -->
+      <div class="space-y-4">
+        <h4 class="text-lg font-semibold text-white">Get in Touch</h4>
+        <div class="space-y-2 text-gray-300">
+          <div class="flex items-center">
+            <span class="text-yellow-400 mr-2">📧</span>
+            <span>info@kotatravels.bt</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-yellow-400 mr-2">📱</span>
+            <span>+975 XXXX XXXX</span>
+          </div>
+          <div class="flex items-center">
+            <span class="text-yellow-400 mr-2">📍</span>
+            <span>Thimphu, Bhutan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom Bar -->
+    <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+      <p>&copy; {{ "" | date("yyyy") }} {{ site.name }}. All rights reserved. | Sustainable Tourism • Cultural Respect • Family Values</p>
+    </div>
+  </div>
 </footer>
